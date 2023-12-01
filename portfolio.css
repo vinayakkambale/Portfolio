@@ -1,0 +1,336 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  .header {
+    background-color: antiquewhite;
+  }
+
+  /* #home {
+    background-color: grey;
+  }
+
+  .left-section {
+  background-color: lightpink;
+  }
+
+  .lp-image {
+    background-color: aquamarine;
+  }
+
+  #projects {
+   background-color: blueviolet;
+  }
+
+  .like-tiles {
+  background-color: lightseagreen;
+  }
+
+  #about {
+    background-color: pink;
+  } */
+
+  /* SCROLL BEHAVIOUR */
+  ::-webkit-scrollbar {
+    background-color: #61677A;
+    border-radius: 25px;
+    width: 10px;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  /* padding-inline: 5rem; */
+}
+
+/* NAV BAR START */ 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.8rem;
+  height: 5rem;
+  font-weight: bold;
+}
+
+.header .nav-logo {
+  height: 1rem;
+  font-size: 1.2rem;
+}
+
+.navbar_list {
+  display: flex;
+  gap: 4.5rem;
+  list-style: none;
+}
+
+
+.navbar_list > li > a {
+  color: #444444;
+  text-decoration: none;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+}
+
+/* NAV BAR END */
+
+/* MAIN - HERO SECTION */
+#home {
+  display: flex;
+  height: 100vh;
+}
+
+ .left-section {
+  width: 50%;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #444444;
+}
+
+.left-section > span > button {
+  background-color: #f5f1f1;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 17px;
+  margin: 0 10px;
+  box-shadow:  2px 3px 7px 0 rgba(0, 0, 0, 0.1);
+}
+
+.left-section > span > button > a {
+  color: #9b9898;
+  text-decoration: none;
+}
+
+.right-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lp-img {
+  width: 70%;
+}
+
+/* SECOND SECTION */
+#projects {
+  padding-block: 2.5rem;
+}
+
+#project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  margin: 40px 0;
+}
+
+#project-cards > div {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 150px;
+  width: 200px;
+  box-shadow:  2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#projects-title {
+  margin: 0px 20px;
+  font-weight: bold;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  padding-block: 2.5rem;
+}
+
+#about  div {
+  padding: 10px 16px;
+  font-weight: bold;
+}
+
+#about > p {
+  padding: 10px;
+}
+
+#about > .likes-container {
+  font-size: bold;
+}
+
+.like-tiles {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.like-tiles  div {
+  display: block;
+  border: 1px solid black;
+  border-radius: 5%;
+  height: 150px;
+  width: 175px;
+  margin: 15px 10px;
+  box-shadow:  2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset -3px -4px 15px rgba(128, 128, 128, 0.7)
+}
+
+
+/* FOOTER */
+#contact {
+  background-color: #28292A;
+  color: white;
+  position: relative;
+  padding-block: 2.5rem;
+}
+
+#contact > p {
+  text-align: center;
+  margin: 5px 0;
+}
+
+#socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+#socials > div {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:  2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#socials > div > i {
+  filter: invert();
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 62em) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 1000;
+  }
+
+  .nav-logo {
+    width: 40%;
+  }
+
+  .navbar {
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background-color: #E7F5FF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+  }
+
+  .navbar {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .navbar_list {
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none; */
+  }
+
+  .navbar_list > li > a {
+    padding: 1.5rem 0;
+  }
+
+  .active .mobile-navbar-btn > .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+  
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .active .mobile-navbar-btn > .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+
+
+  #home {
+    position: relative;
+  }
+  
+  .left-section {
+    font-size: 2em;
+    position: absolute;
+    bottom: 10rem;
+    left: 10rem;
+  }
+  
+  .right-section {
+    /* width: 70%; */
+    position: absolute;
+    top: 7rem;
+    left: 12rem;
+  }
+
+  .lp-img {
+    width: 90%;
+  }
+  
+}
+/* NAV BAR END   */
+
+/* WHAT WE LEARN  */
+/* 1. when we use display flex, instead of width adjustments flex property help to adjust content as per container to make responsive layout */
+
+/* 2. how vw and flex property works?*/
