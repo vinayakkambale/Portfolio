@@ -1,15 +1,17 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
   .header {
-    background-color: antiquewhite;
   }
-
+  
   /*-----VARIABLES----- */
   :root {
+    --primary-bg-color: antiquewhite;
+    --secondary-bg-color: #F3F4F6;
     --bg-btn-color: #f5f1f1;
     --btn-color: #9b9898;
     --primary-font-color: #444444;
-    --container-padding: 5rem;
+    --container-padding-inline: 10rem;
+    --container-padding-block: 5rem;
   }
 
   /* #home {
@@ -71,6 +73,8 @@
   padding: 0 2.8rem;
   height: 10vh;
   font-weight: bold;
+  background-color: var(--primary-bg-color);
+  /* background-color: var(--secondary-bg-color); */
 }
 
 .header .nav-logo {
@@ -113,7 +117,7 @@
 #home {
   display: flex;
   height: 100vh;
-  padding-inline: var(--container-padding);
+  padding-inline: var(--container-padding-block);
 
 }
 
@@ -126,19 +130,26 @@
   color: var(--primary-font-color);
 }
 
+.left-section > div {
+  margin: 10px 0;
+}
+
 .desc > p {
   font-size: 1rem;
 }
 
-.left-section > div > button {
+.left-section > .btn > button {
   background-color: var(--bg-btn-color);
   font-weight: bold;
   border: none;
   border-radius: 7px;
   padding: 10px 17px;
-  margin: 0 10px;
   box-shadow:  2px 3px 7px 0 rgba(0, 0, 0, 0.1);
 }
+
+/* .left-section > .btn {
+  margin-top: 10px;
+} */
 
 .left-section > div > button > a {
   color: var(--btn-color);
@@ -158,8 +169,10 @@
 
 /* SECOND SECTION */
 #projects {
-  padding-block: 2.5rem;
-  padding-inline: var(--container-padding);
+  padding-block: var(--container-padding-block);
+  padding-inline: var(--container-padding-inline);
+  /* background-color: var(--primary-bg-color); */
+  background-color: var(--secondary-bg-color);
 }
 
 #project-cards {
@@ -172,7 +185,6 @@
 }
 
 #project-cards > div {
-  border: 1px solid black;
   border-radius: 10px;
   height: 150px;
   width: 200px;
@@ -181,19 +193,20 @@
 
 #heading {
   font-weight: bold;
-  font-size: large;
+  font-size: 1.5rem;
+}
+
+#sub-heading {
+  font-weight: bold;
 }
 
 /* ABOUT SECTION */
 
 #about {
-  padding-block: 2.5rem;
-  padding-inline: var(--container-padding);
+  padding-block: var(--container-padding-block);
+  padding-inline: var(--container-padding-inline);
 }
 
-#about > div {
-  font-weight: bold;
-}
 
 #about > p {
   padding: 10px 0;
@@ -203,24 +216,34 @@
 .skills {
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.skills > div {
-  background-color: #F3F4F6;
+.skills > div, .interests {
+  background-color: var(--secondary-bg-color);
   border-radius: 5%;
-  height: 120px;
-  width: 175px;
+  width: 180px;
   margin: 15px 10px;
   padding: 1rem 1rem;
 }
 
-.skills > div > p {
-  font-size: 0.8rem;
-  color: black;
+.skills > div:nth-child(1) {
+  height: 110px;
 }
 
+.skills > div:nth-child(2) {
+  height: 100px;
+}
+
+.skills > div:nth-child(3) {
+  height: 90px;
+}
+
+.skills > div > p {
+  font-size: 0.85rem;
+  color: black;
+}
 
 .interests-container {
   padding: 20px 0;
@@ -228,23 +251,55 @@
 
 .interests {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  /* flex-direction: column; */
 }
 
 .interests > .editing {
-  background-color: #F3F4F6;
-  border-radius: 5%;
-  height: 120px;
-  width: 175px;
-  margin: 15px 10px;
-  padding: 1rem 1rem;
+  height: 62px;
 }
+
+.interests > p {
+  font-size: 0.85rem;
+}
+
+/* EDUCATIONAL BACKGROUND */
+#educational-bg {
+  background-color: var(--secondary-bg-color);
+  /* background-color: var(--primary-bg-color); */
+  padding-inline: var(--container-padding-inline);
+  padding-block: var(--container-padding-block);
+}
+
+#education-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#experience > h4 {
+  padding: 10px 0;
+}
+
+#education > h4 {
+  padding: 10px 0;
+}
+
+#education, #experience{
+  background-color: white;
+  border-radius: 5%;
+  width: 400px;
+  margin: 15px 10px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
 
 /* FOOTER */
 #contact {
-  background-color: #28292A;
+  background-color: var(--primary-font-color);
+  /* background-color: #28292A; */
   color: white;
   position: relative;
   padding-block: 2.5rem;
@@ -348,9 +403,9 @@
   .left-section {
     font-size: 2em;
     position: absolute;
-    bottom: 10rem;
-    left: 10
-    rem;
+    left: 11rem;
+    bottom: 7rem;
+    align-items: center;
   }
   
   .right-section {
