@@ -6,34 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manish's Portfolio</title>
   <link rel="stylesheet" href="portfolio.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <div id="container">
     <!-- NAV BAR START -->
     <header class="header">
-    <div class="nav-logo">
-      <p>Manish's Portfolio</p>
-    </div>
-    <nav class="navbar" class="active">
-        <ul class="navbar_list">
+      <div class="nav-logo">
+        <p>Manish's Portfolio</p>
+      </div>
+      <nav class="navbar" class="active">
+        <ul class="navbar-list">
           <li><a class="navbar-link" href="#home">Home</a></li>
           <li><a class="navbar-link" href="#projects">Projects</a></li>
           <li><a class="navbar-link" href="#about">About</a></li>
           <li><a class="navbar-link" href="#contact">Contact</a></li>
         </ul>
-
-      <!-- <div id="btn-container">
-        <button class="btn_mode">Download CV</button>
-      </div> -->
-      
-      
-    </nav>
-    <div class="mobile-navbar-btn">
-      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
-      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
-  </div>
+      </nav>
+      <div class="mobile-navbar-btn">
+        <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </div>
     </header>
     <!-- NAV BAR END -->
 
@@ -42,10 +38,15 @@
       <section id="home">
         <div class="left-section">
           <p>👋 Hi,&nbsp I'm <span class="name">Manish</span></p>
-          <span>
+          <div class="desc">
+          <p>
+            A Frontend Developer with a passion for creating beautiful websites. Also i like to spend my free time in editing and looking others work
+          </p>
+        </div>
+          <div>
             <button><a href="#works">See my works</a></button>
             <button><a href="#resume">Resume</a></button>
-          </span>
+          </div>
         </div>
         <div class="right-section">
           <img src="Images/developer-2.png" class="lp-img">
@@ -54,7 +55,7 @@
 
       <!-- PROJECTS SECTION -->
       <section id="projects">
-        <div id="projects-title">PROJECTS</div>
+        <div id="heading">PROJECTS</div>
         <div id="project-cards">
           <div>Project 1</div>
           <div>Project 2</div>
@@ -64,42 +65,67 @@
 
       <!-- ABOUT SECTION -->
       <section id="about">
-          <div>ABOUT</div>
+        <div id="heading">ABOUT</div>
         <p>
           A small introduction about me
         </p>
         <p>
-          This is Manish Mohan Chavan, I've developed an interest in Web Development and now i enjoy creating websites with minimal UI designs.
+          This is Manish Mohan Chavan, I've developed an interest in Web Development and now i enjoy creating websites
+          with minimal UI designs.
         </p>
-        <div class="likes-container">
-          <p>What I Like to do</p>
-          <div class="like-tiles">
-            <div>Development</div>
-            <div>Designing</div>
-            <div>Editing</div>
+
+        <div class="skills">
+          <div class="frontend">
+            <h4>Frontend</h4>
+            <p>
+              HTML, CSS, Javascript, BootStrap, JQuery
+            </p>
+          </div>
+          <div class="Backend">
+            <h4>Backend</h4>
+            <p>
+              PHP
+            </p>
+          </div>
+          <div class="database">
+            <h4>Database</h4>
+            <p>
+              MySQL
+            </p>
           </div>
         </div>
+
+        <div class="interests-container">
+          <div class="heading">Other Interests</div>
+          <div class="interests">
+            <div class="editing">
+              <h4>Editing</h4>
+              <p>Lightroom Mobile</p>
+            </div>
+          </div>
+        </div>
+
       </section>
     </main>
 
     <!-- FOOTER -->
-      <footer id="contact">
-        <p>Find Me ↴</p>
-        <p>manish.chavan113@gmail.com</p>
-        <div id="socials">
-          <div><i class="fa-brands fa-linkedin" style="color: #28292a;"></i></div>
-          <div><i class="fa-brands fa-github" style="color: #28292a;"></i></div>
-          <div><i class="fa-regular fa-envelope" style="color: #28292a;"></i></div>
-        </div>
-        <p>Copyright © Manish Chavan - All rights reserved</p>
-        </footer>
+    <footer id="contact">
+      <p>Find Me ↴</p>
+      <p>manish.chavan113@gmail.com</p>
+      <div id="socials">
+        <div><i class="fa-brands fa-linkedin" style="color: #28292a;"></i></div>
+        <div><i class="fa-brands fa-github" style="color: #28292a;"></i></div>
+        <div><i class="fa-regular fa-envelope" style="color: #28292a;"></i></div>
+      </div>
+      <p>Copyright © Manish Chavan - All rights reserved</p>
+    </footer>
 
   </div>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<script src="portfolio.js"></script>
+  <script src="portfolio.js"></script>
 </body>
 
 </html>
