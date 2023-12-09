@@ -348,7 +348,7 @@
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 915px) {
   .mobile-navbar-btn {
     display: block;
     z-index: 1000;
