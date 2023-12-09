@@ -421,6 +421,10 @@
     display: block;
   }
 
+  .desc > p{
+    font-size: 0.9rem;
+  }
+
   #about, #education, #experience, #skills, #interests-container, #education-container > p {
     font-size: 0.9rem;
   }
