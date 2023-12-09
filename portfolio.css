@@ -421,12 +421,12 @@
     display: block;
   }
 
-  .left-section > .desc > p {
-    font-size: 0.8rem;
+  #about, #education, #experience, #skills, #interests-container, #education-container > p {
+    font-size: 0.9rem;
   }
 
   .left-section > .btn > button {
-   font-size: 0.8rem;
+   font-size: 0.9rem;
   }
 
   #home, #projects, #about, #educational-bg {
