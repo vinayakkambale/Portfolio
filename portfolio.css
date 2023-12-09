@@ -12,30 +12,6 @@
     --container-padding-block: 5rem;
   }
 
-  /* #home {
-    background-color: grey;
-  }
-
-  .left-section {
-  background-color: lightpink;
-  }
-
-  .lp-image {
-    background-color: aquamarine;
-  }
-
-  #projects {
-   background-color: blueviolet;
-  }
-
-  .like-tiles {
-  background-color: lightseagreen;
-  }
-
-  #about {
-    background-color: pink;
-  } */
-
   /* SCROLL BEHAVIOUR */
   ::-webkit-scrollbar {
     background-color: #61677A;
@@ -316,7 +292,11 @@
 
 #contact > p {
   text-align: center;
-  margin: 5px 0;
+  margin: 20px 0;
+}
+
+#contact > p:last-child {
+  margin-top: 30px;
 }
 
 #socials {
@@ -425,7 +405,7 @@
     font-size: 0.9rem;
   }
 
-  #about, #education, #experience, #skills, #interests-container, #education-container > p {
+  #about, #education, #experience, #skills, #interests-container, #education-container, #contact > p {
     font-size: 0.9rem;
   }
 
@@ -437,5 +417,6 @@
     padding-inline: 2rem;
   }
   
+
 
 }
