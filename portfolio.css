@@ -12,20 +12,32 @@
     --container-padding-block: 5rem;
   }
 
-  /* SCROLL BEHAVIOUR */
-  ::-webkit-scrollbar {
-    background-color: #61677A;
+  /* SCROLL BEHAVIOUR*/
+  ::-webkit-scrollbar{
+    width: 15px;
     border-radius: 25px;
-    width: 10px;
   }
-  
+  ::-webkit-scrollbar-track{
+      background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb{
+      background: #ccc;
+      border-radius: 30px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+      background: #bbb;
+  }
+  /* ---------------- */
+
   html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    /* scroll-behavior: smooth; */
   }
 
 * {
@@ -138,6 +150,11 @@
   text-decoration: none;
 }
 
+.left-section button:hover {
+  background-color: #d1ccccd7;
+  cursor: pointer;
+}
+
 .right-section {
   width: 50%;
   display: flex;
@@ -160,7 +177,7 @@
 #project-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   gap: 2rem;
   margin: 40px 0;
@@ -169,8 +186,15 @@
 #project-cards > div {
   border-radius: 10px;
   height: 150px;
-  min-width: 200px;
+  min-width: 150px;
   box-shadow:  2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  overflow: hidden;
+}
+
+#project-cards div a img {
+  height: 100%;
+
 }
 
 #heading {
@@ -237,10 +261,10 @@
 }
 
 .interests > .editing {
-  height: 62px;
+  height: 82px;
 }
 
-.interests > p {
+.interests > .editing > p {
   font-size: 0.85rem;
 }
 
