@@ -91,12 +91,11 @@
 }
 
 .mobile-navbar-btn {
-  display: flex;
+  display: none;
   /* background: transparent; */
   cursor: pointer;
   padding-left: 3rem;
 }
-
 
 .mobile-nav-icon {
   height: 2rem;
