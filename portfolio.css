@@ -30,13 +30,13 @@
   /* ---------------- */
 
   html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
   }
   body {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* scroll-behavior: smooth; */
   }
 
@@ -91,10 +91,12 @@
 }
 
 .mobile-navbar-btn {
-  display: none;
-  background: transparent;
+  display: flex;
+  /* background: transparent; */
   cursor: pointer;
+  padding-left: 3rem;
 }
+
 
 .mobile-nav-icon {
   height: 2rem;
@@ -112,7 +114,14 @@
   display: flex;
   height: calc(100vh - 90px);
   padding-inline: var(--container-padding-block);
+}
 
+.mobile-nav-icon[name="menu-outline"] {
+  display: flex;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
 }
 
  .left-section {
@@ -303,8 +312,6 @@
   box-shadow:  2px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-
 /* FOOTER */
 #contact {
   background-color: var(--primary-font-color);
@@ -334,8 +341,6 @@
   cursor: pointer;
 }
 
-
-
 #socials > div {
   height: 35px;
   width: 35px;
@@ -362,6 +367,10 @@
     font-size: 1.2rem;
   }
 
+  .header {
+    position: relative;
+  }
+
   .navbar {
     /* display: none; */
     width: 100%;
@@ -371,27 +380,29 @@
     top: 0;
     left: 0;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: all 0.5s linear;
-  }
-
-  .navbar {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
   }
 
+  
   .navbar-list {
     /* display: flex; */
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-
-    /* opacity: 0;
-    visibility: hidden;
-    pointer-events: none; */
+    
+  }
+  
+  .active .navbar {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .navbar-list > li > a {
@@ -400,12 +411,6 @@
 
   .active .mobile-navbar-btn > .mobile-nav-icon[name="menu-outline"] {
     display: none;
-  }
-  
-  .active .navbar {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
   }
   
   .active .mobile-navbar-btn > .mobile-nav-icon[name="close-outline"] {
@@ -425,7 +430,7 @@
     display: block;
   }
 
-  .desc > p{
+  .desc > p {
     font-size: 0.9rem;
   }
 
@@ -440,7 +445,4 @@
   #home, #projects, #about, #educational-bg {
     padding-inline: 2rem;
   }
-  
-
-
 }
