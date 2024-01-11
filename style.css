@@ -262,11 +262,35 @@
 }
 
 .interests > .editing {
-  height: 82px;
+  height: 123px;
 }
 
-.interests > .editing > p {
+.interests .editing p {
   font-size: 0.85rem;
+}
+
+.interests .editing button {
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  background-color: #fff;
+  padding: 0.4rem 1rem;
+  margin: 8px 0;
+}
+
+.interests .editing button a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.interests .editing button a:hover {
+  color: blue;
+}
+
+.interests > .editing > button:hover {
+  background-color: #d1ccccd7;
+  cursor: pointer;
 }
 
 /* EDUCATIONAL BACKGROUND */
