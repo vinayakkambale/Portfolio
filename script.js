@@ -6,4 +6,4 @@ const toggleNav = () => {
  nav_header.classList.toggle("active");
 }
 
-mobile_nav.addEventListener("click", () => toggleNav());q
+mobile_nav.addEventListener("click", () => toggleNav());
