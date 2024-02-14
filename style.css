@@ -192,6 +192,8 @@ box-shadow:  2px 4px 8px 0 rgba(0, 0, 0, 0.2);
 padding: 1rem;
 background-color: var(--secondary-bg-color);
 position: relative;
+background: rgb(78,93,87);
+background: linear-gradient(43deg, rgba(78,93,87,0.2) 0%, rgba(255,255,255,1) 0%, rgba(161,159,159,1) 15%, rgba(57,56,55,0.2) 50%);
 }
 
 #project-cards > div a {
@@ -199,8 +201,9 @@ position: relative;
   position: absolute;
   font-weight: 700;
   font-size: 1.2rem;
-  }
-  
+  color: #504a4ae9;
+  height: 100%;
+}
 
 #heading {
 font-weight: bold;
