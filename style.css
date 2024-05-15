@@ -266,10 +266,11 @@ padding: 20px 0;
 
 .interests {
 display: flex;
+flex-direction: column;
 }
 
 .interests > .editing {
-height: 123px;
+height: 55px;
 }
 
 .interests .editing p {
